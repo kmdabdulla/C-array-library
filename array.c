@@ -33,7 +33,7 @@ struct arr_diff array_diff(int *array1, int *array2, int array1_Size, int array2
 	 return a struct which contains difference array and its size*/
 
 	int i,j,flag=0,count=0;
-        struct arr_diff diff; 
+	struct arr_diff diff; 
 	int *data = malloc(array1_Size*sizeof(int));
 	for(i=0;i<array1_Size;i++) {
 		for(j=0;j<array2_Size;j++) {
@@ -48,10 +48,28 @@ struct arr_diff array_diff(int *array1, int *array2, int array1_Size, int array2
 		}
 		flag=0;
 	}
-        diff.data = data;
-        diff.arraySize = count;
+	diff.data = data;
+	diff.arraySize = count;
 	return diff;
-	
+
 }
 
+int in_array(int *array,int arraySize,int val) { //function to check whether value exists in an array or not
 
+    /* 
+        *array - pointer to array
+        arraySize - size of the array
+        val - value to be checked 	
+
+	return 1 if exists otherwise 0
+	*/
+	int i;
+	for(i=0;i<arraySize;i++) {
+		if(array[i]==val) {
+			return 1;
+		}
+		return 0;
+	}	
+
+
+}
