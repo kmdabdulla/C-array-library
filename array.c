@@ -56,13 +56,13 @@ struct arr_diff array_diff(int *array1, int *array2, int array1_Size, int array2
 
 int in_array(int *array,int arraySize,int val) { //function to check whether value exists in an array or not
 
-    /* 
-        *array - pointer to array
-        arraySize - size of the array
-        val - value to be checked 	
+	/* 
+	 *array - pointer to array
+	 arraySize - size of the array
+	 val - value to be checked 	
 
-	return 1 if exists otherwise 0
-	*/
+	 return 1 if exists otherwise 0
+	 */
 	int i;
 	for(i=0;i<arraySize;i++) {
 		if(array[i]==val) {
@@ -73,3 +73,40 @@ int in_array(int *array,int arraySize,int val) { //function to check whether val
 
 
 }
+
+int* unset(int *array,int arraySize,int val, int key) { //function to remove the element in an array based on key or value
+
+
+	/* *array - pointer to array
+	   arraySize - size of the array
+	   val - value or key to be removed 
+	   key - boolean value which tells whether the value that is contained in 
+	   val variable is a key or actual value itself.
+	   key = (can take 0 or 1) 0 means value in the val variable is actual value itself 
+		 1 means value in val variable is the key in the array to be removed
+
+	   returns the pointer to the array of the new array with element removed
+	 */
+
+	int i,count=0;
+	int *data = calloc(arraySize-1,sizeof(int));
+	for(i=0;i<arraySize;i++) {
+		if(key==0) { 
+			if(array[i]!=val) {
+				data[count] = array[i];
+				count++;        
+			}
+		} else {
+			if(i!=val) {
+				data[count] = array[i];	
+				count++; 
+			}
+
+		}	
+
+	}
+
+	return data;
+
+
+}	  
