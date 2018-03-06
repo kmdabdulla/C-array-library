@@ -255,3 +255,35 @@ int* array_reverse(int *array, int arraySize) { //function to return elements in
 	return *data;
 
 }
+
+int array_search(int *array, int arraySize,int val) { //returns the key for the given value in the array
+
+	/*
+	*array - pointer to the array
+        val - value for which the key should be found
+	arraySize - size of the array
+
+        return the key corresponding to the given value*/
+
+	int i,key;
+	for(i=0;i<=arraySize;i++) {
+		if(array[i]==val) {
+		    key = i;	
+		    break;	
+		}	
+	}
+	return key;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+}

@@ -21,4 +21,5 @@ struct new_array array_slice(int*,int, int, int);
 int array_sum(int*,int);
 int array_product(int*,int);
 int* array_reverse(int*,int);
+int array_search(int *array, int arraySize,int val)
 #endif
