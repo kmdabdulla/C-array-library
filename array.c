@@ -3,7 +3,7 @@
 #include "string.h"
 #include "array.h"
 
-int** array_chunk(int *array, int arraySize, int chunkSize) { //function to chunk the array with the given chunk size 
+int** array_chunk(int *array, int arraySize, int chunkSize) { //function to chunk the array with the given chunk size fegew 
 	/*
 	 *array - pointer to array to be chunked
 	 arraySize - number of elements in the array
